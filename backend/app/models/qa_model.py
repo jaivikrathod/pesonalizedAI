@@ -22,3 +22,10 @@ def insert_qa_data(userid, question, answer, paraphrases):
         return result.inserted_id
     except Exception as e:
         raise Exception(f"Error inserting QA data: {str(e)}")
+
+
+def load_dataset():
+    """
+    Load the QA dataset from the database.
+    """
+    return list(collection.find({}, {"_id": 0}))
