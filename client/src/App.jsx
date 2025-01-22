@@ -1,10 +1,10 @@
 import React from 'react'
-import AddQa from './component/AddQa'
+import Routing from './Routing'
 import "./App.css"
 export default function App() {
   return (
     <>
-      <AddQa />
+      <Routing/>
     </>
   )
 }

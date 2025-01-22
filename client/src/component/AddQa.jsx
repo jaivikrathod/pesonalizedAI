@@ -23,9 +23,9 @@ export default function AddQa() {
 
   const onSubmit = (data) => {
     console.log("Form Data Submitted:", data);
-
+     data.userid = 3;
     // Simulate API submission
-    fetch("https://dummyapi.com/qa", {
+    fetch("http://127.0.0.1:5000/qa/set-qa", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -36,7 +36,7 @@ export default function AddQa() {
       .then((response) => {
         alert("Data submitted successfully!");
         console.log(response);
-        reset(); // Reset the form after submission
+        reset(); 
       })
       .catch((error) => {
         console.error("Error submitting form:", error);
