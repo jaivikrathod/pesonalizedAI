@@ -24,7 +24,6 @@ def prepare_embeddings():
             "all_related": all_related
         })
 
-prepare_embeddings()
 
 def get_answer(customer_question, threshold=0.5):
     if not customer_question.strip():
@@ -62,6 +61,7 @@ chatBot = Blueprint('chatBot', __name__)
 @chatBot.route('/chat2', methods=['POST'])
 def process_question():
     try:
+        prepare_embeddings()
         data = request.get_json()
         question = data.get("question", "")
         response = get_answer(question)
