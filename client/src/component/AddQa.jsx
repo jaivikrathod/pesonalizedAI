@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useForm, useFieldArray } from "react-hook-form";
+import axios from "axios";
 
 export default function AddQa() {
   const {
@@ -12,7 +13,7 @@ export default function AddQa() {
     defaultValues: {
       question: "",
       answer: "",
-      paraphrases: [{ paraphrase: "" }],
+      paraphrases: [],
     },
   });
 
@@ -22,21 +23,19 @@ export default function AddQa() {
   });
 
   const onSubmit = (data) => {
-    console.log("Form Data Submitted:", data);
-     data.userid = 3;
-    // Simulate API submission
-    fetch("http://127.0.0.1:5000/qa/set-qa", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((res) => res.json())
+    const formattedData = {
+      question: data.question,
+      answer: data.answer,
+      paraphrases: data.paraphrases.map((item) => item.paraphrase),
+      userid: 3,
+    };
+
+    axios
+      .post("http://127.0.0.1:5000/qa/set-qa", formattedData)
       .then((response) => {
         alert("Data submitted successfully!");
-        console.log(response);
-        reset(); 
+        console.log(response.data);
+        reset();
       })
       .catch((error) => {
         console.error("Error submitting form:", error);

@@ -1,214 +1,277 @@
 [
   {
-    "question": "What is your return policy?",
-    "answer": "You can return items within 30 days of purchase.",
-    "paraphrases": [
-      "Can I return an item?",
-      "How can I initiate a return?",
-      "What are the rules for returning items?",
-      "How do I return my order?"
-    ]
+    "userid": 1,
+    "QA": {
+      "question": "What is your return policy?",
+      "answer": "You can return items within 30 days of purchase.",
+      "paraphrases": [
+        "Can I return an item?",
+        "How can I initiate a return?",
+        "What are the rules for returning items?",
+        "How do I return my order?"
+      ]
+    }
   },
   {
-    "question": "How do I track my order?",
-    "answer": "You can track your order using the tracking number sent to your email.",
-    "paraphrases": [
-      "Can I check my order status?",
-      "Where is my order?",
-      "How can I track where my order is?",
-      "Is there a way to find my shipment?"
-    ]
+    "userid": 2,
+    "QA": {
+      "question": "How do I track my order?",
+      "answer": "You can track your order using the tracking number sent to your email.",
+      "paraphrases": [
+        "Can I check my order status?",
+        "Where is my order?",
+        "How can I track where my order is?",
+        "Is there a way to find my shipment?"
+      ]
+    }
   },
   {
-    "question": "What payment methods do you accept?",
-    "answer": "We accept credit cards, debit cards, PayPal, and UPI.",
-    "paraphrases": [
-      "How can I pay for my order?",
-      "Do you support PayPal?",
-      "What payment options are available?",
-      "Can I pay with my card?"
-    ]
+    "userid": 3,
+    "QA": {
+      "question": "What payment methods do you accept?",
+      "answer": "We accept credit cards, debit cards, PayPal, and UPI.",
+      "paraphrases": [
+        "How can I pay for my order?",
+        "Do you support PayPal?",
+        "What payment options are available?",
+        "Can I pay with my card?"
+      ]
+    }
   },
   {
-    "question": "Do you ship internationally?",
-    "answer": "Yes, we ship to select countries. Check our shipping policy for details.",
-    "paraphrases": [
-      "Can I place an order from abroad?",
-      "Do you deliver to other countries?",
-      "Is international shipping available?",
-      "Can I order if I’m not in the country?"
-    ]
+    "userid": 4,
+    "QA": {
+      "question": "Do you ship internationally?",
+      "answer": "Yes, we ship to select countries. Check our shipping policy for details.",
+      "paraphrases": [
+        "Can I place an order from abroad?",
+        "Do you deliver to other countries?",
+        "Is international shipping available?",
+        "Can I order if I’m not in the country?"
+      ]
+    }
   },
   {
-    "question": "How can I cancel my order?",
-    "answer": "You can cancel your order from the 'My Orders' section before it is shipped.",
-    "paraphrases": [
-      "Can I stop my order?",
-      "How do I cancel an ongoing order?",
-      "Is it possible to cancel my purchase?",
-      "How do I remove an order?",
-      "cancle my order"
-    ]
+    "userid": 5,
+    "QA": {
+      "question": "How can I cancel my order?",
+      "answer": "You can cancel your order from the 'My Orders' section before it is shipped.",
+      "paraphrases": [
+        "Can I stop my order?",
+        "How do I cancel an ongoing order?",
+        "Is it possible to cancel my purchase?",
+        "How do I remove an order?",
+        "cancle my order"
+      ]
+    }
   },
   {
-    "question": "How can I deactivate my account?",
-    "answer": "You can Deactivate your account by abcdf",
-    "paraphrases": [
-      "Can I deactivate my account?",
-      "How do I deactivate account?",
-      "Is it possible to deactivate my account?",
-      "How do I remove account?",
-      "cancle my account"
-    ]
+    "userid": 6,
+    "QA": {
+      "question": "How can I deactivate my account?",
+      "answer": "You can Deactivate your account by abcdf",
+      "paraphrases": [
+        "Can I deactivate my account?",
+        "How do I deactivate account?",
+        "Is it possible to deactivate my account?",
+        "How do I remove account?",
+        "cancle my account"
+      ]
+    }
   },
   {
-    "question": "How long does shipping take?",
-    "answer": "Shipping usually takes 5-7 business days.",
-    "paraphrases": [
-      "When will I receive my order?",
-      "What is the delivery time?",
-      "How many days for shipping?",
-      "How quickly do you deliver?"
-    ]
+    "userid": 7,
+    "QA": {
+      "question": "How long does shipping take?",
+      "answer": "Shipping usually takes 5-7 business days.",
+      "paraphrases": [
+        "When will I receive my order?",
+        "What is the delivery time?",
+        "How many days for shipping?",
+        "How quickly do you deliver?"
+      ]
+    }
   },
   {
-    "question": "What is your refund process?",
-    "answer": "Refunds are processed within 7 business days after the returned item is received.",
-    "paraphrases": [
-      "How do I get my money back?",
-      "What are the steps for a refund?",
-      "When will I get my refund?",
-      "Can you refund me?"
-    ]
+    "userid": 8,
+    "QA": {
+      "question": "What is your refund process?",
+      "answer": "Refunds are processed within 7 business days after the returned item is received.",
+      "paraphrases": [
+        "How do I get my money back?",
+        "What are the steps for a refund?",
+        "When will I get my refund?",
+        "Can you refund me?"
+      ]
+    }
   },
   {
-    "question": "Do you offer gift wrapping?",
-    "answer": "Yes, we offer gift wrapping for an additional charge during checkout.",
-    "paraphrases": [
-      "Can you wrap my order as a gift?",
-      "Is there a gift packaging option?",
-      "How can I add gift wrapping?",
-      "Do you wrap items for gifts?"
-    ]
+    "userid": 9,
+    "QA": {
+      "question": "Do you offer gift wrapping?",
+      "answer": "Yes, we offer gift wrapping for an additional charge during checkout.",
+      "paraphrases": [
+        "Can you wrap my order as a gift?",
+        "Is there a gift packaging option?",
+        "How can I add gift wrapping?",
+        "Do you wrap items for gifts?"
+      ]
+    }
   },
   {
-    "question": "Can I change my delivery address?",
-    "answer": "You can update your delivery address before the order is shipped.",
-    "paraphrases": [
-      "How do I edit my address?",
-      "Can I correct the shipping address?",
-      "What if my address is wrong?",
-      "Can I update where my package goes?"
-    ]
+    "userid": 10,
+    "QA": {
+      "question": "Can I change my delivery address?",
+      "answer": "You can update your delivery address before the order is shipped.",
+      "paraphrases": [
+        "How do I edit my address?",
+        "Can I correct the shipping address?",
+        "What if my address is wrong?",
+        "Can I update where my package goes?"
+      ]
+    }
   },
   {
-    "question": "What should I do if I receive a damaged item?",
-    "answer": "Please contact customer support with photos of the damaged item for assistance.",
-    "paraphrases": [
-      "How do I report a broken item?",
-      "What if my package is damaged?",
-      "Can I return a defective product?",
-      "What happens if I receive something broken?"
-    ]
+    "userid": 11,
+    "QA": {
+      "question": "What should I do if I receive a damaged item?",
+      "answer": "Please contact customer support with photos of the damaged item for assistance.",
+      "paraphrases": [
+        "How do I report a broken item?",
+        "What if my package is damaged?",
+        "Can I return a defective product?",
+        "What happens if I receive something broken?"
+      ]
+    }
   },
   {
-    "question": "Do you have a loyalty program?",
-    "answer": "Yes, you can earn points for every purchase and redeem them for discounts.",
-    "paraphrases": [
-      "Can I earn rewards?",
-      "Is there a points system?",
-      "Do you have customer rewards?",
-      "How do loyalty points work?"
-    ]
+    "userid": 12,
+    "QA": {
+      "question": "Do you have a loyalty program?",
+      "answer": "Yes, you can earn points for every purchase and redeem them for discounts.",
+      "paraphrases": [
+        "Can I earn rewards?",
+        "Is there a points system?",
+        "Do you have customer rewards?",
+        "How do loyalty points work?"
+      ]
+    }
   },
   {
-    "question": "Do you offer discounts for first-time buyers?",
-    "answer": "Yes, new customers get a 10% discount on their first purchase.",
-    "paraphrases": [
-      "Is there a promo for new users?",
-      "Do first-time customers get a discount?",
-      "What offers do you have for new buyers?",
-      "Are there discounts for first orders?"
-    ]
+    "userid": 13,
+    "QA": {
+      "question": "Do you offer discounts for first-time buyers?",
+      "answer": "Yes, new customers get a 10% discount on their first purchase.",
+      "paraphrases": [
+        "Is there a promo for new users?",
+        "Do first-time customers get a discount?",
+        "What offers do you have for new buyers?",
+        "Are there discounts for first orders?"
+      ]
+    }
   },
   {
-    "question": "Can I pay using cryptocurrency?",
-    "answer": "No, we currently do not accept cryptocurrency payments.",
-    "paraphrases": [
-      "Do you take Bitcoin?",
-      "Can I pay with crypto?",
-      "Is Ethereum accepted?",
-      "What about cryptocurrency payments?"
-    ]
+    "userid": 14,
+    "QA": {
+      "question": "Can I pay using cryptocurrency?",
+      "answer": "No, we currently do not accept cryptocurrency payments.",
+      "paraphrases": [
+        "Do you take Bitcoin?",
+        "Can I pay with crypto?",
+        "Is Ethereum accepted?",
+        "What about cryptocurrency payments?"
+      ]
+    }
   },
   {
-    "question": "Can I purchase without creating an account?",
-    "answer": "Yes, you can check out as a guest without signing up.",
-    "paraphrases": [
-      "Do I need an account to buy?",
-      "Can I order as a guest?",
-      "Is registration required for shopping?",
-      "Can I shop without logging in?"
-    ]
+    "userid": 15,
+    "QA": {
+      "question": "Can I purchase without creating an account?",
+      "answer": "Yes, you can check out as a guest without signing up.",
+      "paraphrases": [
+        "Do I need an account to buy?",
+        "Can I order as a guest?",
+        "Is registration required for shopping?",
+        "Can I shop without logging in?"
+      ]
+    }
   },
   {
-    "question": "Do you offer installment payment options?",
-    "answer": "Yes, we offer installment payments via Klarna and Afterpay.",
-    "paraphrases": [
-      "Can I pay in parts?",
-      "Is EMI available?",
-      "Do you support split payments?",
-      "Can I pay in installments?"
-    ]
+    "userid": 16,
+    "QA": {
+      "question": "Do you offer installment payment options?",
+      "answer": "Yes, we offer installment payments via Klarna and Afterpay.",
+      "paraphrases": [
+        "Can I pay in parts?",
+        "Is EMI available?",
+        "Do you support split payments?",
+        "Can I pay in installments?"
+      ]
+    }
   },
   {
-    "question": "I don’t like the product?",
-    "answer": "You can return the product within the return period for a refund or exchange.",
-    "paraphrases": [
-      "Can I return something I don’t want?",
-      "What if the product doesn’t meet my expectations?",
-      "How do I handle a product I don’t like?",
-      "Is there a return policy for dissatisfaction?"
-    ]
+    "userid": 17,
+    "QA": {
+      "question": "I don’t like the product?",
+      "answer": "You can return the product within the return period for a refund or exchange.",
+      "paraphrases": [
+        "Can I return something I don’t want?",
+        "What if the product doesn’t meet my expectations?",
+        "How do I handle a product I don’t like?",
+        "Is there a return policy for dissatisfaction?"
+      ]
+    }
   },
   {
-    "question": "contact customer support?",
-    "answer": "You can reach our support team via email or live chat on our website.",
-    "paraphrases": [
-      "How do I get help?",
-      "Can I talk to customer care?",
-      "Is there a way to contact support?",
-      "Who can I speak to for assistance?"
-    ]
+    "userid": 18,
+    "QA": {
+      "question": "contact customer support?",
+      "answer": "You can reach our support team via email or live chat on our website.",
+      "paraphrases": [
+        "How do I get help?",
+        "Can I talk to customer care?",
+        "Is there a way to contact support?",
+        "Who can I speak to for assistance?"
+      ]
+    }
   },
   {
-    "question": "What happens if my payment fails?",
-    "answer": "If your payment fails, please try again or contact your bank for assistance.",
-    "paraphrases": [
-      "What do I do if my card doesn’t work?",
-      "How do I fix a failed payment?",
-      "Why isn’t my payment going through?",
-      "What should I do about payment errors?"
-    ]
+    "userid": 19,
+    "QA": {
+      "question": "What happens if my payment fails?",
+      "answer": "If your payment fails, please try again or contact your bank for assistance.",
+      "paraphrases": [
+        "What do I do if my card doesn’t work?",
+        "How do I fix a failed payment?",
+        "Why isn’t my payment going through?",
+        "What should I do about payment errors?"
+      ]
+    }
   },
   {
-    "question": "Do you offer free shipping?",
-    "answer": "We offer free shipping on orders above $50.",
-    "paraphrases": [
-      "Is shipping free?",
-      "How can I get free delivery?",
-      "Do I need to pay for shipping?",
-      "What are the conditions for free shipping?"
-    ]
+    "userid": 20,
+    "QA": {
+      "question": "Do you offer free shipping?",
+      "answer": "We offer free shipping on orders above $50.",
+      "paraphrases": [
+        "Is shipping free?",
+        "How can I get free delivery?",
+        "Do I need to pay for shipping?",
+        "What are the conditions for free shipping?"
+      ]
+    }
   },
   {
-    "question": "Do you have a mobile app?",
-    "answer": "Yes, you can download our app from the App Store or Google Play.",
-    "paraphrases": [
-      "Can I shop through an app?",
-      "Do you have an iOS or Android app?",
-      "Is there a mobile app available?",
-      "Where can I find your app?"
-    ]
+    "userid": 21,
+    "QA": {
+      "question": "Do you have a mobile app?",
+      "answer": "Yes, you can download our app from the App Store or Google Play.",
+      "paraphrases": [
+        "Can I shop through an app?",
+        "Do you have an iOS or Android app?",
+        "Is there a mobile app available?",
+        "Where can I find your app?"
+      ]
+    }
   }
 ]

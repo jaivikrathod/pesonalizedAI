@@ -13,16 +13,21 @@ question_groups = []
 
 def prepare_embeddings():
     global embeddings, question_groups
+    print("qa_data",qa_data)
     for pair in qa_data:
         question = pair["QA"]["question"]
-        paraphrases = pair["QA"].get("paraphrases", [])
+        print("question",question)
+        paraphrases = pair["QA"]["paraphrases"]
+        print("para",paraphrases)
         all_related = [question] + paraphrases
+        print("all re",all_related)
         embeddings.append(model.encode(all_related, convert_to_tensor=True))
         question_groups.append({
             "main_question": question,
             "answer": pair["QA"]["answer"],
             "all_related": all_related
         })
+        print(question_groups)
 
 
 def get_answer(customer_question, threshold=0.5):
@@ -63,6 +68,7 @@ def process_question():
     try:
         prepare_embeddings()
         data = request.get_json()
+        print(data)
         question = data.get("question", "")
         response = get_answer(question)
         return jsonify(response), 200
