@@ -3,13 +3,14 @@ from app.config import db_url, db_name
 
 client = MongoClient(db_url)
 db = client[db_name]
-collection = 'QA_updated'
+collection = db['QA']
 
-def insert_qa_data(userid,QA):
+def insert_qa_data(userid,QA,filaNames):
     try:
         data = {
             "userid": userid,
             "QA":QA,
+            "media":filaNames,
         }
         result = collection.insert_one(data)
         return result.inserted_id
