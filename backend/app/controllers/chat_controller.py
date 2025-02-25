@@ -97,6 +97,9 @@ qa_data = load_dataset()
 embeddings = []
 question_groups = []
 
+subEmbeddings = []
+subQuestion_groups = []
+
 def prepare_embeddings():
     global embeddings, question_groups
     for pair in qa_data:
@@ -111,6 +114,22 @@ def prepare_embeddings():
                 "all_related": all_related,
                 "media": pair["media"]
             })
+
+def prepare_subEmbeddings():
+    global subEmbeddings, subQuestion_groups
+    for pair in qa_data:
+        if pair["QA"]["isDefault"]:
+            question = pair["QA"]["question"]
+            paraphrases = pair["QA"]["paraphrases"]
+            all_related = [question] + paraphrases
+            subEmbeddings.append(model.encode(all_related, convert_to_tensor=True))
+            question_groups.append({
+                "main_question": question,
+                "answer": pair["QA"]["answer"],
+                "all_related": all_related,
+                "media": pair["media"]
+            })
+    
 
 def get_answer(customer_question, threshold=0.4):
     print("Received question:", customer_question)  # Debugging print
@@ -149,13 +168,12 @@ def get_answer(customer_question, threshold=0.4):
          response["media"] = [f"http://127.0.0.1:5000/media/{filename}" for filename in best_match["media"]]
          return response
 
-    print("No suitable answer found.")  # Debugging print
+    print("No suitable answer found.") 
     return {"message": "I'm sorry, I couldn't find a suitable answer. Could you rephrase your question?"}
 
-# Prepare embeddings once at server startup
 prepare_embeddings()
 
-@socketio.on("chat_message")  # Changed event name to avoid conflicts
+@socketio.on("chat_message")  
 def handle_chat_message(data):
     try:
         print("Chat function called, received:", data)
