@@ -83,7 +83,7 @@ export default function AddQa() {
           <div>
             <label className="block text-sm font-medium text-gray-700">Select Options</label>
             <select multiple {...register("subQuestions")} className="w-full border rounded-md shadow-sm focus:ring focus:ring-indigo-300">
-              <option value="option1">Option 1</option>
+              <option value="How are you..?">Option 1</option>
               <option value="option2">Option 2</option>
               <option value="option3">Option 3</option>
             </select>

@@ -1,14 +1,17 @@
 from flask import Flask
 from flask_cors import CORS
-from .routes import register_routes
+from flask_socketio import SocketIO,send
+
+socketio = SocketIO(cors_allowed_origins="*")  # Initialize socket globally
 
 def create_app():
     app = Flask(__name__)
+    CORS(app)
 
-    # Enable CORS for the frontend
-    CORS(app, resources={r"/*": {"origins": "http://localhost:5173"}})
+    socketio.init_app(app)  # Attach SocketIO to the app
 
-    # Register the routes
+    from app.routes import register_routes
     register_routes(app)
 
     return app
+

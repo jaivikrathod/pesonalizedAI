@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 // import { useDispatch } from 'react-redux';
 import AddQa from "./component/AddQa";
 import Chat from "./component/Chat";
-
+import Chat2 from "./component/chat2";
 
 const apiUrl = import.meta.env.VITE_API;
 
@@ -59,6 +59,7 @@ const RoutingContent = ({ isAuthenticated, isLoading, setIsLoading }) => {
         <Routes>
             <Route path="/" element={<AddQa />}></Route>
             <Route path="/chat" element={<Chat />}></Route>
+            <Route path="/chat2" element={<Chat2 />}></Route>
             {/* <Route path="/Admin" element={isAuthenticated ? <AdminDashboard /> : <AdminLogin />}>
 
                 {isAuthenticated && (
