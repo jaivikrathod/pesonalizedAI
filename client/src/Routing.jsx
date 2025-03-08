@@ -4,6 +4,10 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import AddQa from "./component/AddQa";
 import Chat from "./component/Chat";
 import Chat2 from "./component/chat2";
+import AddQa2 from "./component/AddQa2";
+import Home from "./component/Home";
+import Login from "./component/Login";
+import Signup from "./component/Signup";
 
 const apiUrl = import.meta.env.VITE_API;
 
@@ -57,9 +61,12 @@ const RoutingContent = ({ isAuthenticated, isLoading, setIsLoading }) => {
     return (
 
         <Routes>
-            <Route path="/" element={<AddQa />}></Route>
-            <Route path="/chat" element={<Chat />}></Route>
-            <Route path="/chat2" element={<Chat2 />}></Route>
+            <Route path="/" element={<Home />}>
+            <Route path="addQA" element={<AddQa2 />}></Route>
+            <Route path="chat" element={<Chat />}></Route>
+            </Route>
+            <Route path="login" element={<Login />}></Route>
+            <Route path="signup" element={<Signup />}></Route>
             {/* <Route path="/Admin" element={isAuthenticated ? <AdminDashboard /> : <AdminLogin />}>
 
                 {isAuthenticated && (

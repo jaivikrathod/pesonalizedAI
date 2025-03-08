@@ -4,3 +4,16 @@
     display: flex;
     margin-top: 50px;
 }
+
+.inside-chat{
+
+    width: 80vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.gap-15{
+    gap: 15px;
+}

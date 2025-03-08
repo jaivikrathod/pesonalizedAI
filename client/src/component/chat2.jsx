@@ -53,18 +53,17 @@ export default function Chat2() {
 
   return (
     <div className="chat-main">
-      <div className="w-full max-w-md bg-white shadow-lg rounded-lg overflow-hidden">
+      <div className="inside-chat bg-white shadow-lg rounded-lg overflow-hidden">
         <div className="bg-blue-500 text-white p-4 text-center font-bold">
           Chat with Us
         </div>
 
      <div className="h-96 overflow-y-auto p-4 space-y-4">
   {messages.map((message, index) => (
-    <div key={index} className={`flex ${message.sender === "bot" ? "items-start" : "justify-end"}`}>
+    <div key={index} className={`flex ${message.sender === "bot" ? "items-start" : "justify-end"} gap-15`}>
       {message.sender === "bot" && <div className="w-10 h-10 rounded-full bg-gray-300"></div>}
       <div className={`${message.sender === "bot" ? "bg-gray-100 text-gray-700" : "bg-blue-500 text-white"} p-3 rounded-lg shadow text-sm max-w-xs`}>
         {message.text}
-        {/* Render Media if Available */}
         {message.media && message.media.map((mediaUrl, i) => (
           <div key={i} className="mt-2">
             {mediaUrl.endsWith(".mp4") || mediaUrl.endsWith(".webm") ? (

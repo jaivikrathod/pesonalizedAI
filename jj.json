@@ -1,0 +1,243 @@
+[
+    {
+      "userid": "1",
+      "QA": {
+        "question": "how to reset my password?",
+        "answer": "Click on 'Forgot Password' on the login page to reset.",
+        "paraphrases": [
+          "reset password",
+          "forgot password",
+          "change password"
+        ],
+        "isDefault": true,
+        "main_category": ["account"],
+        "sub_category": ["password"]
+      },
+      "media": []
+    },
+    {
+      "userid": "2",
+      "QA": {
+        "question": "where is my order?",
+        "answer": "You can track your order in the 'My Orders' section.",
+        "paraphrases": [
+          "track order",
+          "order status",
+          "delivery update"
+        ],
+        "isDefault": true,
+        "main_category": ["order"],
+        "sub_category": ["tracking"]
+      },
+      "media": []
+    },
+    {
+      "userid": "3",
+      "QA": {
+        "question": "send me a pic of acne",
+        "answer": "This is the pic of the acne.",
+        "paraphrases": [
+          "acne pic",
+          "acne photo",
+          "acne pictures"
+        ],
+        "isDefault": true,
+        "main_category": ["order","test"],
+        "sub_category": ["return","test"]
+      },
+      "media": ["20250225140132_3_Untitled.jpg"]
+    },
+    {
+      "userid": "4",
+      "QA": {
+        "question": "how do I return a product?",
+        "answer": "Go to 'My Orders', select the item, and click 'Return'.",
+        "paraphrases": [
+          "return process",
+          "send item back",
+          "how to return"
+        ],
+        "isDefault": true,
+        "main_category": ["order"],
+        "sub_category": ["return"]
+      },
+      "media": []
+    },
+    {
+      "userid": "5",
+      "QA": {
+        "question": "can I change my delivery address?",
+        "answer": "You can update your address before order confirmation.",
+        "paraphrases": [
+          "edit shipping address",
+          "change delivery location",
+          "update my address"
+        ],
+        "isDefault": false,
+        "main_category": ["order"],
+        "sub_category": ["shipping"]
+      },
+      "media": []
+    },
+    {
+      "userid": "6",
+      "QA": {
+        "question": "do you offer gift wrapping?",
+        "answer": "Yes, we provide gift wrapping for an additional fee.",
+        "paraphrases": [
+          "gift wrap available?",
+          "wrapping service",
+          "can I get gift wrap?"
+        ],
+        "isDefault": false,
+        "main_category": ["order"],
+        "sub_category": ["gift"]
+      },
+      "media": []
+    },
+    {
+      "userid": "7",
+      "QA": {
+        "question": "what are your customer service hours?",
+        "answer": "Our support team is available 24/7.",
+        "paraphrases": [
+          "customer service timing",
+          "support hours",
+          "when can I contact support?"
+        ],
+        "isDefault": true,
+        "main_category": ["support"],
+        "sub_category": ["hours"]
+      },
+      "media": []
+    },
+    {
+      "userid": "8",
+      "QA": {
+        "question": "how long does shipping take?",
+        "answer": "Standard shipping takes 3-5 business days.",
+        "paraphrases": [
+          "shipping time",
+          "delivery duration",
+          "how long for my package?"
+        ],
+        "isDefault": true,
+        "main_category": ["order"],
+        "sub_category": ["shipping"]
+      },
+      "media": []
+    },
+    {
+      "userid": "9",
+      "QA": {
+        "question": "can I get a refund?",
+        "answer": "Refunds are processed within 7-10 business days after approval.",
+        "paraphrases": [
+          "refund process",
+          "money back",
+          "get a refund"
+        ],
+        "isDefault": true,
+        "main_category": ["order"],
+        "sub_category": ["refund"]
+      },
+      "media": []
+    },
+    {
+      "userid": "10",
+      "QA": {
+        "question": "do you have a mobile app?",
+        "answer": "Yes, our app is available on iOS and Android.",
+        "paraphrases": [
+          "mobile application",
+          "download app",
+          "do you have an app?"
+        ],
+        "isDefault": false,
+        "main_category": ["account"],
+        "sub_category": ["app"]
+      },
+      "media": []
+    },
+    {
+      "userid": "11",
+      "QA": {
+        "question": "can I cancel my order?",
+        "answer": "You can cancel your order before it is shipped.",
+        "paraphrases": [
+          "order cancellation",
+          "cancel my purchase",
+          "stop my order"
+        ],
+        "isDefault": true,
+        "main_category": ["order"],
+        "sub_category": ["cancellation"]
+      },
+      "media": []
+    },
+    {
+      "userid": "12",
+      "QA": {
+        "question": "how do I apply a promo code?",
+        "answer": "Enter your promo code at checkout to avail the discount.",
+        "paraphrases": [
+          "apply discount code",
+          "use coupon",
+          "redeem promo code"
+        ],
+        "isDefault": true,
+        "main_category": ["order"],
+        "sub_category": ["discount"]
+      },
+      "media": []
+    },
+    {
+      "userid": "13",
+      "QA": {
+        "question": "is my payment secure?",
+        "answer": "Yes, we use end-to-end encryption for secure transactions.",
+        "paraphrases": [
+          "payment security",
+          "safe payment",
+          "secure checkout"
+        ],
+        "isDefault": true,
+        "main_category": ["account"],
+        "sub_category": ["payment"]
+      },
+      "media": []
+    },
+    {
+      "userid": "14",
+      "QA": {
+        "question": "do you offer express shipping?",
+        "answer": "Yes, we offer express shipping for an extra fee.",
+        "paraphrases": [
+          "fast delivery",
+          "next-day shipping",
+          "express courier"
+        ],
+        "isDefault": false,
+        "main_category": ["order"],
+        "sub_category": ["shipping"]
+      },
+      "media": []
+    },
+    {
+      "userid": "15",
+      "QA": {
+        "question": "where is my refund?",
+        "answer": "Refunds take 7-10 business days to process.",
+        "paraphrases": [
+          "refund status",
+          "money return",
+          "when will I get my refund?"
+        ],
+        "isDefault": true,
+        "main_category": ["order"],
+        "sub_category": ["refund"]
+      },
+      "media": []
+    }
+  ]
+  
