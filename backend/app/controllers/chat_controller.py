@@ -14,6 +14,7 @@ model = SentenceTransformer('all-MiniLM-L6-v2')
 qa_data = load_dataset()
 embeddings = []
 question_groups = []
+selectedCategory = ""
 
 subEmbeddings = []
 subQuestion_groups = []
@@ -30,26 +31,29 @@ def prepare_embeddings():
                 "main_question": question,
                 "answer": pair["QA"]["answer"],
                 "all_related": all_related,
-                "media": pair["media"]
+                "media": pair["media"],
+                "category":pair["QA"]["category"]
             })
 
 def prepare_subEmbeddings():
     global subEmbeddings, subQuestion_groups
     for pair in qa_data:
-        if pair["QA"]["isDefault"]:
+        if pair.get("QA", {}).get("category") == selectedCategory:
             question = pair["QA"]["question"]
             paraphrases = pair["QA"]["paraphrases"]
             all_related = [question] + paraphrases
             subEmbeddings.append(model.encode(all_related, convert_to_tensor=True))
-            question_groups.append({
+            subQuestion_groups.append({
                 "main_question": question,
                 "answer": pair["QA"]["answer"],
                 "all_related": all_related,
-                "media": pair["media"]
+                "media": pair["media"],
+                "category":pair["QA"]["category"]
             })
     
 
 def get_answer(customer_question, threshold=0.4):
+    global selectedCategory, selected_question_group, selected_group_embeddings
     print("Received question:", customer_question)  
 
     if not customer_question.strip():
@@ -60,7 +64,14 @@ def get_answer(customer_question, threshold=0.4):
     best_match = None
     best_score = -1
 
-    for group, group_embeddings in zip(question_groups, embeddings):
+    if not subEmbeddings and not subQuestion_groups:
+       selected_question_group = question_groups
+       selected_group_embeddings =  embeddings
+    else:
+       selected_question_group = subQuestion_groups
+       selected_group_embeddings = subEmbeddings
+        
+    for group, group_embeddings in zip(selected_question_group, selected_group_embeddings):
         scores = util.cos_sim(customer_embedding, group_embeddings).squeeze(0)
         top_score, top_idx = torch.max(scores, dim=0)
 
@@ -70,7 +81,8 @@ def get_answer(customer_question, threshold=0.4):
                 "answer": group["answer"],
                 "matched_question": group["all_related"][top_idx.item()],
                 "media": group["media"],
-                "score": top_score.item()
+                "score": top_score.item(),
+                "category": group["category"]
             }
             best_score = top_score.item()
 
@@ -84,12 +96,24 @@ def get_answer(customer_question, threshold=0.4):
         
         if "media" in best_match:
          response["media"] = [f"http://127.0.0.1:5000/media/{filename}" for filename in best_match["media"]]
-         return response
+        
+        selectedCategory = best_match['category']
+        prepare_subEmbeddings()
+        return response
 
     print("No suitable answer found.") 
+    clearAdditionals()
+    prepare_embeddings()
+    
     return {"message": "I'm sorry, I couldn't find a suitable answer. Could you rephrase your question?"}
 
 prepare_embeddings()
+
+def clearAdditionals():
+    global selectedCategory, subEmbeddings, subQuestion_groups
+    
+    selectedCategory= subEmbeddings=  subQuestion_groups =''
+
 
 @socketio.on("chat_message")  
 def handle_chat_message(data):
