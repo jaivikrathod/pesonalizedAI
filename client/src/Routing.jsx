@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-// import { useDispatch } from 'react-redux';
-import AddQa from "./component/AddQa";
+import { useDispatch } from 'react-redux';
 import Chat from "./component/Chat";
-import Chat2 from "./component/chat2";
 import AddQa2 from "./component/AddQa2";
 import Home from "./component/Home";
 import Login from "./component/Login";
 import Signup from "./component/Signup";
+import UserProtectedRoute from "./component/ProtectedRoute/userProtectedRoute";
 
 const apiUrl = import.meta.env.VITE_API;
 
@@ -44,7 +43,7 @@ const RoutingContent = ({ isAuthenticated, isLoading, setIsLoading }) => {
 
     useEffect(() => {
         const handleStart = () => setIsLoading(true);
-        const handleComplete = () =>  setIsLoading(false);
+        const handleComplete = () => setIsLoading(false);
 
         handleStart();
         handleComplete();
@@ -61,26 +60,14 @@ const RoutingContent = ({ isAuthenticated, isLoading, setIsLoading }) => {
     return (
 
         <Routes>
-            <Route path="/" element={<Home />}>
-            <Route path="addQA" element={<AddQa2 />}></Route>
-            <Route path="chat" element={<Chat />}></Route>
+            <Route element={<UserProtectedRoute />}>
+                <Route path="/" element={<Home />}>
+                    <Route path="addQA" element={<AddQa2 />}></Route>
+                    <Route path="chat" element={<Chat />}></Route>
+                </Route>
             </Route>
             <Route path="login" element={<Login />}></Route>
             <Route path="signup" element={<Signup />}></Route>
-            {/* <Route path="/Admin" element={isAuthenticated ? <AdminDashboard /> : <AdminLogin />}>
-
-                {isAuthenticated && (
-                    <>
-                        <Route path="customer" element={<CustomerManagement />} />
-                        <Route path="users" element={<UserManagement />} />
-                        <Route path="insurance" element={<InsuranceManagement />} />
-                        <Route path="initial-insurance" element={<InsuranceInitialDetails />} />
-                        <Route path="Common-insurance1/:id" element={<InsuranceCommonDetails1 />} />
-                        <Route path="Common-insurance2/:id" element={<InsuranceCommonDetails2 />} />
-                    </>
-                )}
-            </Route> */}
-
             <Route path="*" element={<NotFound />} />
         </Routes>
     );
