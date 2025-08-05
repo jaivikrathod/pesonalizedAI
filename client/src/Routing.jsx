@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useDispatch } from 'react-redux';
-import Chat from "./component/Chat";
+import Chat2 from "./component/Chat2";
 import AddQa2 from "./component/AddQa2";
 import Home from "./component/Home";
 import Login from "./component/Login";
@@ -60,12 +60,12 @@ const RoutingContent = ({ isAuthenticated, isLoading, setIsLoading }) => {
     return (
 
         <Routes>
-            <Route element={<UserProtectedRoute />}>
+            {/* <Route element={<UserProtectedRoute />}> */}
                 <Route path="/" element={<Home />}>
                     <Route path="addQA" element={<AddQa2 />}></Route>
-                    <Route path="chat" element={<Chat />}></Route>
+                    <Route path="chat" element={<Chat2 />}></Route>
                 </Route>
-            </Route>
+            {/* </Route> */}
             <Route path="login" element={<Login />}></Route>
             <Route path="signup" element={<Signup />}></Route>
             <Route path="*" element={<NotFound />} />

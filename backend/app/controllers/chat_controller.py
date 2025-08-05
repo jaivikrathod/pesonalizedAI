@@ -58,7 +58,7 @@ def prepare_subEmbeddings():
             )
 
 
-def get_answer(customer_question, threshold=0.4):
+def get_answer(customer_question, threshold=0.6):
     global selectedCategory, selected_question_group, selected_group_embeddings
     second_term = True
 
@@ -72,7 +72,7 @@ def get_answer(customer_question, threshold=0.4):
             }
 
         customer_embedding = model.encode(customer_question, convert_to_tensor=True)
-
+        print("Customer embedding:", customer_embedding)
         best_match = None
         best_score = -1
 
